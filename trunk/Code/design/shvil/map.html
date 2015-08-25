@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/> 
+    <title>Google Maps JavaScript API Example</title> 
+    <script src="http://maps.google.com/maps?hl=he&file=api&amp;v=2&amp;key=ABQIAAAAqy3qK4SGDMSymD6DRQZLvxTcBaX6I16obSh9oB7wpyuHddsgARS1N5qf1IHegQaqFjUbJsC6FqpyfQ"
+
+      type="text/javascript"></script> 
+    <script type="text/javascript"> 
+    //<![CDATA[
+
+	function createMarker(point,html) {
+
+        var marker = new GMarker(point);
+
+        GEvent.addListener(marker, "click", function() {
+
+          marker.openInfoWindowHtml(html);
+
+        });
+
+        return marker;
+
+      }
+
+
+
+	function load() {
+
+    if (GBrowserIsCompatible()) {
+
+    var map = new GMap2(document.getElementById("map"));
+	map.addControl(new GMapTypeControl());
+	map.addControl(new GLargeMapControl());
+	map.enableDoubleClickZoom();
+    map.setCenter(new GLatLng(33.240722,35.608749), 13);
+	map.setMapType(G_SATELLITE_MAP);
+	var gx = new GGeoXml("http://bebibuki.googlepages.com/IHT.kml");
+
+	map.addOverlay(gx);
+	var gx = new GGeoXml("http://bebibuki.googlepages.com/angles.kml");
+	map.addOverlay(gx);
+
+
+	//creat markers
+
+	//ShvilStart
+
+		//var point = new GLatLng(33.249166,35.652596); //TelDan
+
+      //	var marker = createMarker(point,'<div style="width:240px">תל דן</div>')
+      //	map.addOverlay(marker);
+	
+	
+	//Laos
+	var point = new GLatLng(19.880483,102.140947); //LuangPraban 1.1.2008
+      	var marker = createMarker(point,'<div style="width:240px">1.1.2008 Luang Prabang</div>')
+      	map.addOverlay(marker);
+		
+	var point = new GLatLng(18.921445,102.448526); //Vang Vien
+      	var marker = createMarker(point,'<div style="width:240px">Vang Vien</div>')
+      	map.addOverlay(marker);
+ 
+	var point = new GLatLng(18.571445,102.635093); //Num Nagum
+      	var marker = createMarker(point,'<div style="width:240px">Num Nagum</div>')
+      	map.addOverlay(marker);
+ 
+      }
+    }
+    //]]>
+    </script> 
+  </head> 
+  <body onload="load()" onunload="GUnload()"> 
+    <center>
+    	<h1>
+    		הצטרפו אלינו לשביל
+    	</h1>
+    	<div id="map" style="width: 800px; height: 500px"></div>
+    <a href="IHT.kml">הורדת המסלול לגוגל ארץ</a>
+    </center> 
+    
+  </body> 
+</html>

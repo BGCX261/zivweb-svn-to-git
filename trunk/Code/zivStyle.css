@@ -1,0 +1,419 @@
+@CHARSET "windows-1255";
+BODY{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	direction: rtl;
+	}
+HTML
+	{
+	direction: rtl;
+	}
+/* message MARQUEE**/
+div.MARQ_MSG{
+		color:green;
+	}
+div.MARQ_DATE{
+		color:black;
+		font-style: italic;
+	}
+/***** LOGIN LINK *******/
+div.LOGIN_LINK
+	{
+		font-weight: bold;
+		font-size: large;
+		padding-right: 20px;
+	}
+div.LOGIN_LINK: hover
+	{
+		text-decoration: none;
+		font-weight: bold;
+		font-size: large;
+		padding-right: 20px;
+		color: lime;
+	}
+div.LOGIN_LINK: VISITED
+	{
+		text-decoration: none;
+		font-weight: bold;
+		font-size: large;
+		padding-right: 20px;
+		color: lime;
+	}
+	
+div.LOGIN_LINK: LINK
+	{
+		text-decoration: none;
+		font-weight: bold;
+		font-size: large;
+		padding-right: 20px;
+		color: lime;
+	}
+	
+table{	background-color:white;
+		hight:100%;}  
+table.list	{
+			text-align:center;
+			}
+
+
+tr.ADD_NEW_PERMISSIONS
+			{
+			text-align:center;
+			background-color: orange;	
+			}
+
+table.LIST_BUTTONS	{
+			text-align:center;
+			background-color:#F0F8FF;	
+			width:100%;
+			}
+tr.TABLE_HEADER	{
+				text-align:center;
+				background-color:#99CCFF;
+				font-weight: bold; 	
+				}
+tr.PERMISSIONS_TABLE_HEADER
+				{
+				text-align:center;
+				background-color:#99CCFF;
+				font-weight: bold;
+				
+				}
+h1{color:blue;}
+body					{	
+							direction: rtl;
+							color:Black;
+							background-color:#F0F8FF ;
+							text-align:right
+						}   
+
+div.dataframe 			{
+							hight:100%;
+						}
+div.QUARY_RESULT_ERROR 	{
+							color:Red;
+							text-align:Center;
+						}
+div.WAITING_FOR_APPROVAL 
+						{
+						color:Red;
+						text-align:Center;
+						font-weight: bold; 
+						}
+/********************/
+/* Games*/
+/********************/
+
+table.games
+		{
+			background-color: black;
+			width:1000px;
+			color: black;
+		}
+				
+table.gameMode
+		{
+			background-color: gray;
+			width:700px;
+			color: black;
+		}		
+					
+td.gamesTd
+	{
+	text-align: center;
+	padding-left: 7px;
+	padding-right:7px;
+	width: 250px;
+	height: 200px;
+	}	
+
+/********************/
+/* Calander*/
+/********************/
+table.CALENDAR	
+			{
+			text-align:center;
+			}
+table.MONTH_CALENDAR	
+			{
+			text-align:center;
+			}
+td.CALENDAR
+	{
+	padding-left: 0px;
+	padding-right:0px;
+	width: 1000px; /*TO BIG TO BECAUSE THIS SPREADS THEM EVENLY ON THE SCREEN*/
+	}
+td.PICTURES
+	{
+	padding-left: 10px;
+	padding-right:10px;
+	border-color: black;
+	}	
+	
+td.MONTH_CALENDAR
+	{
+	padding-left: 0px;
+	padding-right:0px;
+	width: 1200px; /*TO BIG TO BECAUSE THIS SPREADS THEM EVENLY ON THE SCREEN*/
+	}	
+	
+div.DATE_TITLE
+	{
+		text-align:Center;
+		font-weight: bold; 
+	}	
+	
+table.PICTURES
+	{
+		text-align:Center;
+		background-color:#F0F8FF;
+		border-color: background;
+	}
+/********************/
+/* User menu Styles*/
+/********************/
+td.USER_MENU
+		{
+		vertical-align: top ;
+		padding: 5px;
+		}
+		
+table.MENU_LIST 	{
+					text-align: right;
+					border: 1px #ffffff;
+					list-style-position: outside;
+					font-weight: bold; 
+					padding: 6px;
+					list-style-type: none
+				}
+tr.MENU_ITEM_TITLE
+		{
+			color: black;
+			border: 1px #ffffff;
+			background-color: #ffffff;
+			/*padding: 5px;*/
+			text-decoration: none;
+		}
+tr.MENU_ITEM 
+		{
+			color: #ffffff;
+			border: 1px #ffffff disc;
+			background-color: #224466;
+			padding: 5px;
+			text-decoration: none;
+		}
+tr.MENU_ITEM :visited
+		{
+			color: #ffffff;
+			border: 1px #ffffff disc;
+			background-color: #224466;
+			/*padding: 5px;*/
+			text-decoration: none;
+		}
+tr.MENU_ITEM :link
+		{
+			color: #ffffff;
+			border: 1px #ffffff disc;
+			background-color: #224466;
+			/*padding: 5px;*/
+			text-decoration: none;
+		}				
+tr.MENU_ITEM :hover
+		{
+			color: #FFff00;
+			background-color: #219dc6;
+			/*padding: 5px;*/
+			text-decoration: none;
+			
+		}
+MENU_ITEM_NOT_IMPLEMENTED
+	{
+		color: #00ff00;
+		border: 1px #ffffff disc;
+		background-color: #224466;
+		/*padding: 5px;*/
+		text-decoration: none;
+	}
+
+a.SUB_MENU_ITEM
+	{
+	color: white;
+	background: navy;
+	
+	text-align: right;
+					border: 1px #ffffff;
+					list-style-position: outside;
+					font-weight: bold; 
+					padding-left : 6px;
+					list-style-type: none
+	}
+	td.SUB_MENU_ITEM
+	{
+	color: white;
+	background: navy;
+	
+	text-align: right;
+					border: 1px #ffffff;
+					list-style-position: outside;
+					font-weight: bold; 
+					padding-left : 6px;
+					list-style-type: none
+	}
+/********************
+* CHAT
+*********************/
+div.CHAT_AREA
+	{
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+td.self
+	{
+	color: black;
+	}
+td.others
+	{
+	color: blue;
+	}
+/********************/
+/*	FORUM			*/
+/********************/
+
+table.FORUM_TOPICS
+	{
+	border: thick;
+	border-style: groove;
+	width: 100%;
+	}
+td.FORUM_TOPICS
+	{
+	border: thin;
+	border-style: solid;
+	background-color:  blue;
+	text-decoration: none;
+	color: white;
+	}
+a.FORUM_TOPICS:link
+	{
+	text-decoration: none;
+	color: white;
+	}
+a.FORUM_TOPICS:hover
+	{
+	text-decoration: none;
+	background-color: navy;
+	cursor: pointer;
+	color: white;
+	
+	}
+	
+td.FORUM_TOPICS_HEADER
+	{
+	border: thin;
+	border-style: solid;
+	background-color:  #00f0a0;
+	border-top-style: hidden;
+	}
+td.FORUM_TOPICS_HEADER
+	{
+	border: thin;
+	border-style: solid;
+	background-color:  navy;
+	color: white;
+	font-weight:bolder;
+	border-top-style: hidden;
+	}
+/*selected topic select*/
+table.FORUM_TOPIC_DISPLAY
+	{
+		width: 100%;
+	}
+tr.FORUM_SUBJECT
+	{
+		width: 100%;
+	}
+td.FORUM_SUBJECT_DATE
+	{
+	text-align:  left;
+	background-color: blue;
+	color: white;
+	}
+td.FORUM_SUBJECT
+	{
+	background-color: blue;
+	color: white;
+	}
+td.FORUM_SUBJECT_TEXT
+	{
+	background-color: blue;
+	color: white;
+	}
+td.FORUM_COMMENT
+	{
+	background-color: #00d0f0;
+	border-left-style: none;
+	border-left: none;
+	}
+td.FORUM_COMMENT_TEXT
+	{
+	padding-right: 30;
+	background-color: #00f0d0;
+	
+	}
+td.FORUM_COMMENT_DATE
+	{
+	border-right-style: none;
+	text-align:  left;
+	background-color: #00d0f0;
+	}
+/********************/
+/*Picture Slide Show*/
+/********************/
+div.PIC_AREA
+		{
+		text-align:Center;
+		}
+/********************/
+/* Guid Aid (TIK MADRICH) Styles*/
+/********************/
+li.DOCUMENT_IMG_LIST
+	{
+	color: Black;
+	}
+ul.DOCUMENT_IMG_LIST
+	{
+	list-style-image: url(img/document.jpg);
+	padding:5px;
+	color: Blue;
+	}	
+ul.DOCUMENT_IMG_LIST :link
+	{
+	list-style-image: url(img/document.jpg);
+	text-decoration: none;
+	color: Blue;
+	
+	}	
+ul.DOCUMENT_IMG_LIST :visited
+	{
+	list-style-image: url(img/document.jpg);
+	text-decoration: none;
+	color: Blue;
+	}
+ul.DOCUMENT_IMG_LIST :hover
+	{
+	list-style-image: url(img/document.jpg);
+	text-decoration: underline;
+	color: Blue;
+	}
+/* Layer - invisable add a file*/
+#addNewFileLayer
+	    {
+	    z-index: 	1;
+	    display: none;
+	    }
+#addNewFileLayer2
+	    {
+	    z-index: 	1;
+	    display: none;
+	    }  

@@ -1,0 +1,130 @@
+@CHARSET "UTF-8";
+body, html{ height: 100%; }
+
+body{
+	color: #fff;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 100.2%;
+	line-height:1.3;
+	direction:rtl;
+}
+
+/*--------------------------------
+	customize 
+---------------------------------*/
+
+/* MAIN TYPOGRAPHY */
+small, sup, sub { font-size: 85%; }
+big { font-size: 125%; line-height: 120%; }
+h1{ font-size:2em; }
+h2{ font-size:1.6em; }
+h3{ font-size:1.2em; }
+h4{ font-size:1em; }
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, 
+strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+a{ color:#A5322D; text-decoration:none; cursor:pointer; }
+a:hover{ color:#ee1e34; }
+table{ border: none; }
+ul, ol, dir, menu { list-style:none; }
+	.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }	/* Controlsthe BR tag, which makes the WRAPPER float stretch for GECKO */
+	.clearfix {display: inline-block; }
+	/* Hides from IE-mac \*/
+		* html .clearfix { height: 1%; }
+		.clearfix { display: block; }
+	/* End hide from IE-mac */
+
+:focus { -moz-outline-style: none; outline:none; }
+*::-moz-selection { background-color:#DEDDD8; color:#333; }
+img{ border:none; }
+
+.floatl{ float: left; }
+.floatr{ float: right; }
+.floatn{ float: none; }
+
+
+/*-------------------------------- 
+	Form elements
+---------------------------------*/
+
+fieldset{ border:0 none; }
+label{ float:right; line-height:1.6em; width:80px;  }
+input, textarea{ color:#444; font-size:1em; font-family:arial; font-weight:bold; padding:2px; }
+input{ border:1px solid #CCC; background-color:#F4F4F4; }
+input[disabled], textarea[disabled]{ color:#888; }
+textarea{ overflow:auto; border:1px solid #CCC; background-color:#F4F4F4; }
+legend{ color:#79B4C8; font-size:1.5em; padding: 0 5px; }
+	
+input:focus, form textarea:focus{ background-color:#FBFBFB; color:#B82222; }
+select:focus{ background-color:#FBFBFB; }
+
+#contact_form fieldset{ width:460px; }
+	form .item{ margin-bottom:16px; }
+	form input{ width:240px; }
+	form textarea{ width:350px; }
+	form button{ cursor: pointer; font-size:1.4em; }
+	form .buttons{ padding:0 80px 0 25px; }
+	form button.send{ float:left; width:87px; height:34px; background: url(../images/btn_send.png) center 0 no-repeat; text-indent:-999px; border:none; overflow:hidden; }
+	form button.send:hover{ background-position:0 bottom; }
+
+/*-------------------------------- 
+	Wrap
+---------------------------------*/
+#wrap{ min-width:940px; position:relative; }
+
+/*-------------------------------- 
+	Header
+---------------------------------*/
+#header{ height:168px; background: url(../images/header_bg.jpg) 0 0 repeat-x; position:relative; overflow:hidden; border-top:8px solid #2E2B26; }
+	#header #logo{ position:absolute; right:0; top:0; width:536px; height:168px; background: url(../images/header_logo.jpg) 0 0 no-repeat; }
+		#header #logo a{ display:block; height:150px; width:110px; margin:10px 20px; }
+	#header ul{ position:absolute; bottom:0px; left:0px; font-size:1.1em; font-weight:bold; }
+		#header ul li{ float:left; padding:40px; }
+			#header ul li a{ color:#41372f; }
+			#header ul li.active a{ color:#b82222; }
+		#header ul li.hover{ padding:0; background: url(../images/main_menu_hover.png) center center no-repeat; }
+			#header ul li.hover a{ padding:40px; display:block; }
+
+			
+/*-------------------------------- 
+	content
+---------------------------------*/
+#content{ min-height:600px; position:relative; background: url(../images/wood_texture.jpg) 0 0 repeat; }	
+	#content .topBg{ height:218px; width:100%; position:absolute: top:0; background: url(../images/wood_top.jpg) 0 0 repeat-x; }
+	#content .container{ padding:50px 80px 110px; min-height:218px; position:absolute: top:0; background: url(../images/wood_top.jpg) 0 0 repeat-x; }
+	* html #content .container{ height:218px; position:relative; }
+		#content .container #catalogList{ clear:both; }
+			#content .container #catalogList li{ float:right; display:inline; width:190px; height:190px; border:4px solid #1f1f1f; padding:1px; margin:40px 25px; background:#383530 url(../images/cat_def.gif) center center no-repeat;; position:relative; }
+				#content .container #catalogList li a{ position:relative; display:block; width:190px; height:190px; }
+				#content .container #catalogList li a b{ display:none; position:absolute; top:63px; left:63px; width:63px; height:63px; background:url(../images/enlarge_icon.png) 0 0 no-repeat; }
+				* html #content .container #catalogList li a b{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/enlarge_icon.png"); }
+				#content .container #catalogList li img{ display:block; text-indent:-999px; position:relative; }
+				.tapeT{ background: url(../images/tape_top.png) 0 0 no-repeat; width:60px; height:60px; position:absolute; top:-17px; left:-17px; opacity:0.9; }
+				* html .tapeT{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/tape_top.png"); }
+				.tapeB{ background: url(../images/tape_bottom.png) 0 0 no-repeat; width:74px; height:60px; position:absolute; bottom:-18px; right:-19px; opacity:0.9; }
+				* html .tapeB{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/tape_bottom.png");}
+
+	#content .container .contBox{ width:60%; margin:0 auto; padding:30px 20px; position:relative; background:#2b2a27 url(../images/leatherBG.jpg) repeat; border:1px dashed #5b5755; }
+	#content .container .contBox.big{ width:90%; }
+		#content .container .contBox h1{ color:#E0DFDA; font-weight:normal; font-size:1.4em; }
+		#content .container .contBox p{ margin-bottom:18px; }
+/*-------------------------------- 
+	Footer
+---------------------------------*/
+#footer{ clear:both; height:136px; background: url(../images/wood_bottom.jpg) 0 0 repeat-x; }
+	#footer .content{ padding:30px 10px; }
+	#footer .content p{ color:#A59E98; }
+	#footer .content p.credit{ position:absolute; bottom:10px; right:10px; font-size:0.9em; font-weight:bold; }
+	#footer .content a{ color:#a5322D; }
+	#footer .content a:hover{ color:#f5322D;  }
+	
+
+
+#bottom_extra_1{ width:283px; height:244px; background: url(../images/bottom_extra.png) 0 0 repeat-x; position:absolute; bottom:0; left:5px; cursor:pointer; }

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<style type="text/css">  
+	    @import url(zivStyle.css);    
+	</style>
+<head>
+
+<title>Insert title here</title>
+</head>
+<body onload="javascript:initChat()">
+	<script type="text/javascript">
+	var postText="";
+	var msgvalue="";
+	var parameters="";
+	
+	function ajaxFunction()
+	{
+	var xmlHttp;
+	try
+	  {
+	  // Firefox, Opera 8.0+, Safari
+	  xmlHttp=new XMLHttpRequest();
+	  }
+	catch (e)
+	  {
+	  // Internet Explorer
+	  try
+	    {
+	    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+	    }
+	  catch (e)
+	    {
+	    try
+	      {
+	      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+	      }
+	    catch (e)
+	      {
+	      alert("Your browser does not support AJAX!");
+	      return false;
+	      }
+	    }
+	  }
+	  xmlHttp.onreadystatechange=function()
+	    {
+	    if(xmlHttp.readyState==4) //Response from mangeChat.php is ready
+	      {
+	      var str = xmlHttp.responseText;
+	      document.getElementById("txtHint").innerHTML=str;
+	      
+	      }
+	    }
+	  var url="manageChat.php";
+	  if (postText.length > 0)
+	  {
+	  	//url=url+"?newMessage="+postText;
+		//url=url+"&sid="+Math.random();
+		
+		msgvalue=encodeURIComponent(postText);
+		parameters="newMessage="+msgvalue;
+		
+		//document.getElementById("txtHint").innerHTML+="<br>"+url;
+		postText="";
+	  }
+	  
+	  
+	  xmlHttp.open("POST",url,true);
+	  xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	  xmlHttp.send(parameters);
+	  
+	  msgvalue="";
+	  parameters="";
+//	  xmlHttp.open("GET",url,true);
+// 	  xmlHttp.send(null);
+	  }
+	function handleKeyPress(e,form)
+	{
+		var key=e.keyCode || e.which;
+		if (key==13)
+		{
+			//form.chatTextArea.value+= form.chatInputArea.value;
+			postText = form.chatInputArea.value;
+			form.chatInputArea.value="";
+			ajaxFunction()
+		}
+	} 
+	function initChat()
+		{
+			objChatFunc = setInterval('refreshChat()',1500)
+		}
+
+	function refreshChat()
+	{
+		ajaxFunction();
+	}
+	</script>
+	<form name="chatArea">
+	<center>
+	<table>
+		<tr class="messageArea">
+			<td>
+				<hr>
+				<h1>ц'аи</h1>
+				<hr>
+				
+				<div id="txtHint" class="messageArea" style="text-align: right"><b>info here</b></div>
+				
+				<hr>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<textarea rows="1" cols="50" name="chatInputArea" onkeypress="handleKeyPress(event,this.form)"></textarea>
+			</td>
+		</tr>
+	</table>
+	<center>
+</form>
+<br>
+
+
+</body>
+</html>
+
